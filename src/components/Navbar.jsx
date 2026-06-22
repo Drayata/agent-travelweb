@@ -31,13 +31,13 @@ export default function Navbar() {
       }`}
       role="banner"
     >
-      <nav className="section-container flex items-center justify-between" aria-label="Main navigation">
+      <nav className="section-container flex items-center justify-between" aria-label="Navigasi utama">
         {/* Logo */}
         <a
           href="#home"
           id="nav-logo"
           className="flex items-center gap-2.5 group"
-          aria-label="WanderLux Travel - Home"
+          aria-label="Travel Purbalingga - Beranda"
         >
           <div className="relative">
             <Globe
@@ -53,7 +53,7 @@ export default function Navbar() {
               isScrolled ? 'text-navy-900' : 'text-white'
             }`}
           >
-            Wander<span className="text-emerald-500">Lux</span>
+            Travel<span className="text-emerald-500">Purbalingga</span>
           </span>
         </a>
 
@@ -78,11 +78,11 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="#cta"
+            href="#packages"
             id="nav-cta-button"
             className="btn-primary text-sm !px-5 !py-2.5"
           >
-            Explore Tours
+            Lihat Paket
           </a>
         </div>
 
@@ -93,7 +93,7 @@ export default function Navbar() {
             isScrolled ? 'text-navy-900 hover:bg-slate-100' : 'text-white hover:bg-white/10'
           }`}
           onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-label={isOpen ? 'Tutup menu' : 'Buka menu'}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
         >
@@ -109,7 +109,7 @@ export default function Navbar() {
         }`}
         role="dialog"
         aria-modal="true"
-        aria-label="Mobile navigation menu"
+        aria-label="Menu navigasi mobile"
       >
         <div
           className="absolute inset-0 bg-navy-950/60 backdrop-blur-sm"
@@ -122,17 +122,17 @@ export default function Navbar() {
         >
           <div className="flex items-center justify-between p-6 border-b border-slate-100">
             <span className="text-lg font-bold text-navy-900">
-              Wander<span className="text-emerald-500">Lux</span>
+              Travel<span className="text-emerald-500">Purbalingga</span>
             </span>
             <button
               className="p-2 rounded-lg text-slate-400 hover:text-navy-900 hover:bg-slate-100 transition-colors"
               onClick={() => setIsOpen(false)}
-              aria-label="Close menu"
+              aria-label="Tutup menu"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
-          <nav className="p-6" aria-label="Mobile navigation">
+          <nav className="p-6" aria-label="Navigasi mobile">
             <ul className="space-y-1" role="list">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -148,11 +148,11 @@ export default function Navbar() {
             </ul>
             <div className="mt-8 pt-6 border-t border-slate-100">
               <a
-                href="#cta"
+                href="#packages"
                 className="btn-primary w-full text-center"
                 onClick={() => setIsOpen(false)}
               >
-                Explore Tours
+                Lihat Paket
               </a>
             </div>
           </nav>

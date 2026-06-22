@@ -1,181 +1,187 @@
 import {
-  Map,
-  Headphones,
+  Car,
   ShieldCheck,
-  Sparkles,
+  Home,
+  Banknote,
 } from 'lucide-react'
 
 export const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Tour Packages', href: '#packages' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Beranda', href: '#home' },
+  { label: 'Paket Travel', href: '#packages' },
+  { label: 'Testimoni', href: '#testimonials' },
   { label: 'FAQ', href: '#faq' },
 ]
 
 export const VALUE_PROPS = [
   {
-    icon: Map,
-    title: 'Curated Itineraries',
+    icon: Car,
+    title: 'Supir Berpengalaman via Tol',
     description:
-      'Every trip is handcrafted by seasoned travel designers who know the hidden gems ordinary tourists miss.',
-  },
-  {
-    icon: Headphones,
-    title: '24/7 Concierge Support',
-    description:
-      'From pre-departure to return, our dedicated travel concierge team is always a message away.',
+      'Semua pengemudi kami profesional, hafal rute tol & jalur alternatif, serta mengutamakan keselamatan penumpang di setiap perjalanan.',
   },
   {
     icon: ShieldCheck,
-    title: 'No Hidden Fees',
+    title: 'Armada Bersih & Terawat',
     description:
-      'Transparent pricing guaranteed. The price you see is the price you pay — no surprises, ever.',
+      'Pilihan armada Avanza, Hiace, dan Elf yang selalu bersih, terawat, full AC, dan siap antar Anda dengan nyaman.',
   },
   {
-    icon: Sparkles,
-    title: 'Exclusive Experiences',
+    icon: Home,
+    title: 'Layanan Door-to-Door',
     description:
-      'Access VIP tours, private guides, and off-the-beaten-path adventures unavailable anywhere else.',
+      'Antar jemput langsung dari depan rumah Anda. Tidak perlu repot ke terminal — kami yang datang ke lokasi Anda.',
+  },
+  {
+    icon: Banknote,
+    title: 'Harga Transparan & Terjangkau',
+    description:
+      'Harga yang Anda lihat adalah harga yang Anda bayar. Tanpa biaya tersembunyi, tanpa kejutan. Dijamin paling murah!',
   },
 ]
 
 export const FEATURED_PACKAGES = [
   {
     id: 1,
-    title: 'Santorini Dream Escape',
-    location: 'Santorini, Greece',
-    duration: '7 Days / 6 Nights',
-    price: 2499,
-    originalPrice: 3199,
+    title: 'Paket Wisata Domestik Purbalingga',
+    location: 'Purbalingga, Jawa Tengah',
+    duration: '1 Hari / Full Day Trip',
+    price: 150000,
+    originalPrice: 225000,
     rating: 4.9,
-    reviewCount: 342,
-    image: 'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=600&h=400&fit=crop&q=80',
-    tags: ['Bestseller', 'Romantic'],
+    reviewCount: 487,
+    image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=600&h=400&fit=crop&q=80',
+    tags: ['Terlaris', 'Wisata Keluarga'],
+    highlights: ["D'Las Serang", 'Owabong', 'Goa Lawa Celong'],
+    currency: 'Rp',
   },
   {
     id: 2,
-    title: 'Bali Serenity Retreat',
-    location: 'Bali, Indonesia',
-    duration: '5 Days / 4 Nights',
-    price: 1899,
-    originalPrice: 2399,
+    title: 'Travel Reguler Purbalingga - Jakarta (PP)',
+    location: 'Purbalingga ⇌ Jakarta',
+    duration: 'Berangkat Setiap Hari',
+    price: 250000,
+    originalPrice: 350000,
     rating: 4.8,
-    reviewCount: 518,
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=400&fit=crop&q=80',
-    tags: ['Popular', 'Wellness'],
+    reviewCount: 1024,
+    image: 'https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=600&h=400&fit=crop&q=80',
+    tags: ['Populer', 'PP'],
+    highlights: ['Door-to-Door', 'Via Tol', 'AC & WiFi'],
+    currency: 'Rp',
   },
   {
     id: 3,
-    title: 'Swiss Alps Adventure',
-    location: 'Interlaken, Switzerland',
-    duration: '6 Days / 5 Nights',
-    price: 3299,
-    originalPrice: 3999,
+    title: 'Travel Reguler Purbalingga - Semarang / Yogyakarta (PP)',
+    location: 'Purbalingga ⇌ Semarang / Jogja',
+    duration: 'Berangkat Setiap Hari',
+    price: 125000,
+    originalPrice: 175000,
     rating: 4.9,
-    reviewCount: 276,
-    image: 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&h=400&fit=crop&q=80',
-    tags: ['Adventure', 'Premium'],
+    reviewCount: 863,
+    image: 'https://images.unsplash.com/photo-1584810359583-96fc3448beaa?w=600&h=400&fit=crop&q=80',
+    tags: ['Hemat', 'PP'],
+    highlights: ['Door-to-Door', 'Armada Hiace', 'Tepat Waktu'],
+    currency: 'Rp',
   },
 ]
 
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: 'Sarah Mitchell',
-    role: 'Solo Traveler',
-    avatar: 'SM',
+    name: 'Ibu Siti Nurhaliza',
+    role: 'Pelanggan Tetap, Purbalingga',
+    avatar: 'SN',
     rating: 5,
-    text: 'WanderLux completely transformed how I travel. The Santorini itinerary was flawless — every restaurant, every sunset spot was curated to perfection. I felt like a VIP the entire trip.',
+    text: 'Sudah 3 kali pakai Travel Purbalingga untuk perjalanan ke Jakarta. Selalu tepat waktu, mobilnya bersih, dan supirnya ramah. Pokoknya recommended banget!',
   },
   {
     id: 2,
-    name: 'James & Emily Park',
-    role: 'Honeymoon Couple',
-    avatar: 'JP',
+    name: 'Bapak Ahmad Fauzi',
+    role: 'Pebisnis, Jakarta - Purbalingga',
+    avatar: 'AF',
     rating: 5,
-    text: "Our Bali honeymoon was the most magical experience of our lives. The private villa, the hidden waterfall tour — things we never could have planned ourselves. Worth every penny.",
+    text: 'Sebagai orang yang sering bolak-balik Jakarta - Purbalingga, saya butuh travel yang bisa diandalkan. Travel Purbalingga jawaban saya. Door-to-door, nggak perlu repot ke terminal.',
   },
   {
     id: 3,
-    name: 'David Okonkwo',
-    role: 'Family Vacation',
-    avatar: 'DO',
+    name: 'Keluarga Budi Santoso',
+    role: 'Wisata Keluarga, Semarang',
+    avatar: 'BS',
     rating: 5,
-    text: "Traveling with three kids under 10 sounded chaotic, but WanderLux made it seamless. Kid-friendly activities were woven into every day. The 24/7 support was a lifesaver when we needed last-minute changes.",
+    text: 'Bawa anak-anak wisata ke Owabong dan Goa Lawa pakai paket dari Travel Purbalingga. Harganya murah, acaranya seru, anak-anak happy! Terima kasih Travel Purbalingga!',
   },
   {
     id: 4,
-    name: 'Priya Sharma',
-    role: 'Adventure Enthusiast',
-    avatar: 'PS',
+    name: 'Mbak Ratna Dewi',
+    role: 'Mahasiswi, Yogyakarta',
+    avatar: 'RD',
     rating: 5,
-    text: "The Swiss Alps trip pushed me out of my comfort zone in the best way. Paragliding over Interlaken, fondue in a mountain hut — it was the perfect blend of adrenaline and relaxation.",
+    text: 'Sering pulang kampung ke Purbalingga naik travel ini. Harganya ramah di kantong mahasiswa, berangkat tepat waktu, dan dijemput langsung di kosan. Mantap!',
   },
 ]
 
 export const FAQ_ITEMS = [
   {
-    question: 'How far in advance should I book my trip?',
+    question: 'Bagaimana cara booking Travel Purbalingga?',
     answer:
-      'We recommend booking at least 4-6 weeks in advance for the best availability and pricing. However, we can accommodate last-minute requests — our team thrives on making the impossible possible.',
+      'Anda bisa langsung menghubungi kami via WhatsApp untuk booking seat atau paket wisata. Cukup kirim pesan dengan tujuan, tanggal keberangkatan, dan jumlah penumpang — tim kami akan langsung memproses pemesanan Anda.',
   },
   {
-    question: 'Can I customize a tour package?',
+    question: 'Apakah bisa dijemput di rumah (door-to-door)?',
     answer:
-      'Absolutely! Every package can be fully tailored to your preferences. Whether it\'s dietary requirements, accessibility needs, or a special anniversary surprise, just let us know during your consultation.',
+      'Tentu! Layanan antar jemput door-to-door adalah keunggulan utama kami. Kami menjemput dan mengantar Anda langsung dari/ke depan rumah tanpa perlu repot ke terminal atau pool.',
   },
   {
-    question: 'What is your cancellation policy?',
+    question: 'Armada apa saja yang tersedia?',
     answer:
-      'We offer free cancellation up to 30 days before departure for a full refund. Cancellations within 14-30 days receive a 50% refund or full travel credit. Within 14 days, we offer travel credit valid for 12 months.',
+      'Kami menyediakan armada Toyota Avanza, Toyota Hiace, dan Isuzu Elf yang selalu terawat, bersih, full AC, dan nyaman. Pilihan armada disesuaikan dengan jumlah penumpang dan rute perjalanan.',
   },
   {
-    question: 'Do you offer group discounts?',
+    question: 'Berapa harga travel Purbalingga - Jakarta?',
     answer:
-      'Yes! Groups of 6+ receive 10% off, and groups of 12+ receive 15% off. We also offer exclusive corporate retreat packages — reach out for a custom quote.',
+      'Harga travel reguler Purbalingga - Jakarta mulai dari Rp 250.000/orang (PP). Harga sudah termasuk antar jemput door-to-door. Hubungi kami via WhatsApp untuk promo dan diskon terbaru.',
   },
   {
-    question: 'Is travel insurance included?',
+    question: 'Apakah ada jadwal keberangkatan setiap hari?',
     answer:
-      'Basic travel insurance is included in all our premium packages. We also partner with leading insurers to offer comprehensive coverage upgrades for medical, trip cancellation, and luggage protection.',
+      'Ya, kami melayani keberangkatan setiap hari untuk rute Purbalingga - Jakarta, Purbalingga - Semarang, dan Purbalingga - Yogyakarta. Jadwal fleksibel dan bisa disesuaikan dengan kebutuhan Anda.',
   },
 ]
 
 export const FOOTER_LINKS = {
   company: [
-    { label: 'About Us', href: '#' },
-    { label: 'Careers', href: '#' },
-    { label: 'Press', href: '#' },
+    { label: 'Tentang Kami', href: '#' },
+    { label: 'Armada Kami', href: '#' },
+    { label: 'Karir', href: '#' },
     { label: 'Blog', href: '#' },
   ],
   support: [
-    { label: 'Help Center', href: '#' },
-    { label: 'Safety', href: '#' },
-    { label: 'Cancellation', href: '#' },
-    { label: 'Contact Us', href: '#' },
+    { label: 'Pusat Bantuan', href: '#' },
+    { label: 'Cara Booking', href: '#' },
+    { label: 'Kebijakan Pembatalan', href: '#' },
+    { label: 'Hubungi Kami', href: '#' },
   ],
   legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
-    { label: 'Cookie Policy', href: '#' },
+    { label: 'Kebijakan Privasi', href: '#' },
+    { label: 'Syarat & Ketentuan', href: '#' },
+    { label: 'Kebijakan Cookie', href: '#' },
   ],
 }
 
 export const DESTINATIONS = [
-  'Bali, Indonesia',
-  'Santorini, Greece',
-  'Kyoto, Japan',
-  'Interlaken, Switzerland',
-  'Marrakech, Morocco',
-  'Reykjavik, Iceland',
-  'Amalfi Coast, Italy',
-  'Queenstown, New Zealand',
+  'Purbalingga - Jakarta',
+  'Purbalingga - Semarang',
+  'Purbalingga - Yogyakarta',
+  'Purbalingga - Bandung',
+  'Purbalingga - Surabaya',
+  'Purbalingga - Cirebon',
+  'Wisata Owabong',
+  'Wisata Goa Lawa Celong',
 ]
 
 export const BUDGETS = [
-  'Under $1,000',
-  '$1,000 – $2,000',
-  '$2,000 – $3,000',
-  '$3,000 – $5,000',
-  '$5,000+',
+  'Di bawah Rp 150.000',
+  'Rp 150.000 – Rp 250.000',
+  'Rp 250.000 – Rp 400.000',
+  'Rp 400.000 – Rp 600.000',
+  'Rp 600.000+',
 ]

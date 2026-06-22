@@ -55,6 +55,7 @@ export default {
         'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
         'float': 'float 3s ease-in-out infinite',
         'shimmer': 'shimmer 2s linear infinite',
+        'wa-pulse': 'waPulse 2s ease-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -84,6 +85,11 @@ export default {
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },
           '100%': { backgroundPosition: '200% 0' },
+        },
+        waPulse: {
+          '0%': { transform: 'scale(1)', opacity: '0.6' },
+          '50%': { transform: 'scale(1.4)', opacity: '0' },
+          '100%': { transform: 'scale(1.4)', opacity: '0' },
         },
       },
     },

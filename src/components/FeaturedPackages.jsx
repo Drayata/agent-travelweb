@@ -5,6 +5,13 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 export default function FeaturedPackages() {
   const [sectionRef, isVisible] = useScrollReveal(0.1)
 
+  const formatPrice = (price, currency) => {
+    if (currency === 'Rp') {
+      return `Rp ${price.toLocaleString('id-ID')}`
+    }
+    return `$${price.toLocaleString()}`
+  }
+
   return (
     <section
       id="packages"
@@ -16,14 +23,14 @@ export default function FeaturedPackages() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block text-emerald-600 text-sm font-bold uppercase tracking-widest mb-4">
-            Featured Packages
+            Paket Unggulan
           </span>
           <h2 id="packages-heading" className="section-heading">
-            Handpicked Journeys
+            Pilihan Paket Travel Terpopuler
           </h2>
           <p className="section-subheading">
-            Our most sought-after experiences, curated for those who
-            demand the extraordinary.
+            Paket wisata dan travel reguler Purbalingga paling diminati
+            dengan harga terjangkau dan pelayanan terbaik.
           </p>
         </div>
 
@@ -42,7 +49,7 @@ export default function FeaturedPackages() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={pkg.image}
-                  alt={`${pkg.title} — scenic view of ${pkg.location}`}
+                  alt={`${pkg.title} — ${pkg.location}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   loading="lazy"
                   width="600"
@@ -65,7 +72,7 @@ export default function FeaturedPackages() {
                 {/* Save Badge */}
                 {pkg.originalPrice && (
                   <div className="absolute top-4 right-4 px-3 py-1 bg-emerald-500 rounded-full text-xs font-bold text-white shadow-lg">
-                    Save ${pkg.originalPrice - pkg.price}
+                    Hemat {formatPrice(pkg.originalPrice - pkg.price, pkg.currency || '$')}
                   </div>
                 )}
 
@@ -84,7 +91,7 @@ export default function FeaturedPackages() {
                     <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
                     <span className="text-sm font-bold text-navy-900">{pkg.rating}</span>
                   </div>
-                  <span className="text-xs text-slate-400">({pkg.reviewCount} reviews)</span>
+                  <span className="text-xs text-slate-400">({pkg.reviewCount} ulasan)</span>
                 </div>
 
                 {/* Title */}
@@ -93,33 +100,47 @@ export default function FeaturedPackages() {
                 </h3>
 
                 {/* Duration */}
-                <div className="flex items-center gap-1.5 text-sm text-slate-500 mb-5">
+                <div className="flex items-center gap-1.5 text-sm text-slate-500 mb-3">
                   <Clock className="w-4 h-4" />
                   <span>{pkg.duration}</span>
                 </div>
+
+                {/* Highlights */}
+                {pkg.highlights && (
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {pkg.highlights.map((h) => (
+                      <span
+                        key={h}
+                        className="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-medium rounded-lg"
+                      >
+                        {h}
+                      </span>
+                    ))}
+                  </div>
+                )}
 
                 {/* Price + CTA */}
                 <div className="flex items-end justify-between pt-4 border-t border-slate-100">
                   <div>
                     {pkg.originalPrice && (
                       <span className="text-sm text-slate-400 line-through mr-2">
-                        ${pkg.originalPrice.toLocaleString()}
+                        {formatPrice(pkg.originalPrice, pkg.currency || '$')}
                       </span>
                     )}
                     <div className="flex items-baseline gap-1">
                       <span className="text-2xl font-extrabold text-navy-900">
-                        ${pkg.price.toLocaleString()}
+                        {formatPrice(pkg.price, pkg.currency || '$')}
                       </span>
-                      <span className="text-sm text-slate-400 font-medium">/person</span>
+                      <span className="text-sm text-slate-400 font-medium">/orang</span>
                     </div>
                   </div>
                   <button
                     className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-emerald-50 text-emerald-700
                       font-semibold text-sm rounded-xl hover:bg-emerald-500 hover:text-white
                       transition-all duration-300 group/btn"
-                    aria-label={`View details for ${pkg.title}`}
+                    aria-label={`Lihat detail ${pkg.title}`}
                   >
-                    View Details
+                    Lihat Detail
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform duration-200" />
                   </button>
                 </div>
@@ -135,7 +156,7 @@ export default function FeaturedPackages() {
             className="btn-secondary group"
             id="view-all-packages"
           >
-            View All Packages
+            Lihat Semua Paket
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
           </a>
         </div>

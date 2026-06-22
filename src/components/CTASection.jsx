@@ -1,5 +1,11 @@
-import { Phone, ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Sparkles, MessageCircle } from 'lucide-react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+
+const WHATSAPP_NUMBER = '6281234567890'
+const WHATSAPP_MESSAGE = encodeURIComponent(
+  'Halo Travel Purbalingga, saya ingin booking paket travel. Bisa info jadwal dan harga terbaru?'
+)
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`
 
 export default function CTASection() {
   const [sectionRef, isVisible] = useScrollReveal(0.1)
@@ -21,7 +27,7 @@ export default function CTASection() {
           <div className="absolute inset-0">
             <img
               src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1400&h=600&fit=crop&q=80"
-              alt="Aerial view of a tropical paradise island with crystal clear water"
+              alt="Pemandangan indah destinasi wisata dari atas"
               className="w-full h-full object-cover"
               loading="lazy"
               width="1400"
@@ -39,31 +45,33 @@ export default function CTASection() {
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-emerald-300" />
-                <span className="text-sm text-emerald-200 font-semibold">Limited Time Offer — 20% Off</span>
+                <span className="text-sm text-emerald-200 font-semibold">Promo Terbatas — Diskon Spesial Hari Ini</span>
               </div>
 
               <h2
                 id="cta-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6"
               >
-                Ready to Start Your
+                Siap Berangkat ke
                 <br />
-                <span className="text-emerald-400">Dream Journey?</span>
+                <span className="text-emerald-400">Tujuan Impian?</span>
               </h2>
 
               <p className="text-lg text-white/70 leading-relaxed mb-10 max-w-lg">
-                Lock in your adventure today with our exclusive early-bird pricing.
-                Talk to a travel expert and get a personalized itinerary in 24 hours.
+                Booking sekarang dan dapatkan harga spesial! Hubungi admin kami via WhatsApp 
+                untuk jadwal keberangkatan, info harga, dan promo terbaru.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="#home"
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   id="cta-book-consultation"
                   className="btn-primary !text-base !px-8 !py-4 !shadow-xl !shadow-emerald-500/30"
                 >
-                  <Phone className="w-5 h-5" />
-                  Book a Free Consultation
+                  <MessageCircle className="w-5 h-5" />
+                  Chat WhatsApp Sekarang
                 </a>
                 <a
                   href="#packages"
@@ -73,7 +81,7 @@ export default function CTASection() {
                     border border-white/20 hover:bg-white/10
                     transition-all duration-300 group"
                 >
-                  Explore Tours
+                  Lihat Paket Travel
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </a>
               </div>

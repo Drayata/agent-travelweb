@@ -65,10 +65,10 @@ export default function FAQ() {
             FAQ
           </span>
           <h2 id="faq-heading" className="section-heading">
-            Frequently Asked Questions
+            Pertanyaan yang Sering Diajukan
           </h2>
           <p className="section-subheading">
-            Everything you need to know before booking your next adventure.
+            Semua yang perlu Anda ketahui sebelum booking travel Purbalingga.
           </p>
         </div>
 
@@ -76,7 +76,7 @@ export default function FAQ() {
         <div
           className={`space-y-3 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
           role="region"
-          aria-label="Frequently asked questions"
+          aria-label="Pertanyaan yang sering diajukan"
         >
           {FAQ_ITEMS.map((item, index) => (
             <FaqItem

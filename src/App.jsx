@@ -6,6 +6,7 @@ import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
 import CTASection from './components/CTASection'
 import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <FAQ />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   )
 }

@@ -15,14 +15,14 @@ export default function ValueProposition() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block text-emerald-600 text-sm font-bold uppercase tracking-widest mb-4">
-            Why Choose Us
+            Kenapa Pilih Kami
           </span>
           <h2 id="value-heading" className="section-heading">
-            Travel With Confidence
+            Perjalanan Nyaman & Terpercaya
           </h2>
           <p className="section-subheading">
-            We handle every detail so you can focus on making memories.
-            Here's what sets WanderLux apart.
+            Kami mengurus semua detail perjalanan Anda. Berikut keunggulan
+            Travel Purbalingga yang membedakan kami dari yang lain.
           </p>
         </div>
 
